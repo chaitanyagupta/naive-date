@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Playground</title>
+    <script src="dist/naive-date.js"></script>
+    <style>
+      .hidden {
+          display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="loaded" class="hidden"><code>NaiveDate</code> has been loaded. Check your console!</p>
+    <p id="not-loaded" class="hidden"><code>NaiveDate</code> has <b>NOT</b> been loaded. Check your console!</p>
+    <script>
+      if (typeof NaiveDate !== 'undefined') {
+        document.getElementById('loaded').classList.remove('hidden')
+      } else {
+        document.getElementById('not-loaded').classList.remove('hidden')
+      }
+    </script>
+  </body>
+</html>

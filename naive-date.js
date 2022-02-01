@@ -4,7 +4,9 @@ export default function NaiveDate(value) {
   }
 
   let utc = null
-  if (arguments.length === 1) {
+
+  const args = arguments
+  if (args.length === 1) {
     if (Number.isInteger(value)) {
       utc = value
     } else if (value instanceof NaiveDate) {
@@ -12,15 +14,14 @@ export default function NaiveDate(value) {
     } else {
       throw new Error('Unrecognized single argument value')
     }
-  } else if (arguments.length > 1) {
-    let year, month, day, hours, minutes, seconds, milliseconds
-    year = arguments[0]
-    month = arguments[1]
-    day = arguments[2] === undefined ? 1 : arguments[2]
-    hours = arguments[3] === undefined ? 0 : arguments[3]
-    minutes = arguments[4] === undefined ? 0 : arguments[4]
-    seconds = arguments[5] === undefined ? 0: arguments[5]
-    milliseconds = arguments[6] === undefined ? 0 : arguments[6]
+  } else if (args.length > 1) {
+    const year = args[0]
+    const month = args[1]
+    const day = args[2] === undefined ? 1 : args[2]
+    const hours = args[3] === undefined ? 0 : args[3]
+    const minutes = args[4] === undefined ? 0 : args[4]
+    const seconds = args[5] === undefined ? 0: args[5]
+    const milliseconds = args[6] === undefined ? 0 : args[6]
     utc = Date.UTC(year, month, day, hours, minutes, seconds, milliseconds)
   } else { 
     throw new Error('Constructor expects at least one value')

@@ -10,18 +10,14 @@
   <body>
     <div id="mocha"></div>
 
-    <script src="node_modules/chai/chai.js"></script>
     <script src="node_modules/mocha/mocha.js"></script>
 
     <script class="mocha-init">
       mocha.setup('bdd');
     </script>
-    <script src="naive-date.test.js" type="module" async></script>
+    <script src="dist/naive-date.test.js"></script>
     <script class="mocha-exec">
-      window.addEventListener('load', function () {
-        console.log('about to run mocha');
-        mocha.run();
-      });
+      mocha.run();
     </script>
   </body>
 </html>

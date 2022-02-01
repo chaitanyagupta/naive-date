@@ -26,7 +26,7 @@ whether they include time zone information or not.
 To create a NaiveDate, you can use the constructor.
 
 ```js
-import { NaiveDate } from 'naive-date'
+import NaiveDate from 'naive-date'
 
 // date only
 // since we use 0 based indexes, the month below is Feb, not Jan
@@ -41,9 +41,9 @@ new NaiveDate(2022, 1, 1, 10, 0, 0)
 Just like `Date`, `NaiveDate` exposes the following getters and setters:
 
 ```js
-import { NaiveDate } from 'naive-date'
+import NaiveDate from 'naive-date'
 
-x = new NaiveDate(2022, 1, 1, 10, 0, 0)
+const x = new NaiveDate(2022, 1, 1, 10, 0, 0)
 
 x.getFullYear()     // 2022
 x.getMonth()        // 1
@@ -75,16 +75,16 @@ Given a timestamp (i.e. a `Date`), use the static method `from()` to get the
 local time in a given time zone.
 
 ```js
-import { NaiveDate } from 'naive-date'
+import NaiveDate from 'naive-date'
 
-x = new Date(Date.UTC(2022, 1, 1, 10, 0, 0))
+const x = new Date(Date.UTC(2022, 1, 1, 10, 0, 0))
 // => 2022-02-01T10:00:00.000Z
 
-y = NaiveDate.from(x, 'Asia/Kolkata')
+const y = NaiveDate.from(x, 'Asia/Kolkata')
 y.toString()
 // => '2022-02-01T15:30:00.000'
 
-z = NaiveDate.from(x, 'America/New_York')
+const z = NaiveDate.from(x, 'America/New_York')
 z.toString()
 // => '2022-02-01T05:00:00.000'
 ```
@@ -93,9 +93,9 @@ And to do the opposite i.e. to get a timestamp given a `NaiveDate` and a
 timezone, use the instance method `.toDate()`. This method returns a `Date`.
 
 ```js
-import { NaiveDate } from 'naive-date'
+import NaiveDate from 'naive-date'
 
-x = new NaiveDate(2022, 1, 1, 10, 0, 0)
+const x = new NaiveDate(2022, 1, 1, 10, 0, 0)
 x.toString()
 // => '2022-02-01T10:00:00.000'
 
