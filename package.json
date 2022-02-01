@@ -1,7 +1,7 @@
 {
   "name": "naive-date",
-  "version": "0.1.0",
-  "description": "Minimalist timezone conversions for Javascript",
+  "version": "0.1.1",
+  "description": "Like Date, but not a timestamp. Useful for time zone conversions.",
   "type": "module",
   "main": "naive-date.js",
   "scripts": {
