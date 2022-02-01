@@ -1,12 +1,5 @@
-import { NaiveDate } from './naive-date.js'
-
-let assert
-if (typeof window === 'undefined') {
-  assert = await import('assert')
-} else {
-  assert = window.chai.assert
-}
-
+import NaiveDate from './naive-date.js'
+import { assert } from 'chai'
 
 function randomInt(max) {
   return Math.floor(Math.random() * max);

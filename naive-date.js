@@ -1,4 +1,4 @@
-export function NaiveDate(value) {
+export default function NaiveDate(value) {
   if (this === undefined) {
     throw new Error('Must be called as a constructor')
   }
