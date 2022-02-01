@@ -221,7 +221,7 @@ describe('Date to NaiveDate', () => {
     assert.equal(nd.getSeconds(), 30, 'seconds')
     assert.equal(nd.getMilliseconds(), 400, 'milliseconds')
   })
-  it('Date to NaiveDAte in EDT (-4)', () => {
+  it('Date to NaiveDate in EDT (-4)', () => {
     const nd = NaiveDate.from(new Date(Date.UTC(2022, 8, 1, 10, 20, 30, 400)), 'America/New_York')
     assert.equal(nd.getFullYear(), 2022, 'year')
     assert.equal(nd.getMonth(), 8, 'month')
