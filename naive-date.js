@@ -108,7 +108,7 @@ NaiveDate.from = (date, timeZone) => {
   const parts = fmt.formatToParts(date)
   const partValue = type => {
     const part = parts.find(part => part.type === type)
-    return parseInt(part.value)
+    return part ? parseInt(part.value) : 0
   }
   return new NaiveDate(
     partValue('year'),
