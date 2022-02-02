@@ -1,7 +1,8 @@
 # naive-date
 
 Use a `NaiveDate` as opposed to [`Date`][Date] when you want a Date like object,
-but one that's not a timestamp. For example,
+but one that's not a timestamp (read [Javascript's Date is just a
+timestamp][Motivation] for more details). For example,
 
 1. You want a YMD date and a time, but these are not linked to any time zone
 2. You want to perform timezone conversions i.e. given a timestamp, what is the
@@ -18,6 +19,10 @@ handling library in your code.
 The term *naive* is inspired by its usage in the [Python datetime module][],
 which categorizes date and time objects as "aware" or "naive" depending on
 whether they include time zone information or not.
+
+[Motivation]: https://lisper.in/javascript-date
+[Date]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+[Python datetime module]: https://docs.python.org/3/library/datetime.html
 
 ## Usage
 
@@ -130,9 +135,6 @@ x.toDate('Asia/Kolkata')
 x.toDate('America/New_York')
 // => 2022-02-01T15:00:00.000Z
 ```
-
-[Date]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-[Python datetime module]: https://docs.python.org/3/library/datetime.html
 
 ## Tests
 
