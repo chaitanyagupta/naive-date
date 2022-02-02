@@ -21,6 +21,20 @@ whether they include time zone information or not.
 
 ## Usage
 
+### Installation
+
+Install using npm:
+
+```
+npm install naive-date
+```
+
+Or include it directly in your HTML page
+
+```html
+<script src="https://unpkg.com/naive-date@0.2.0/dist/naive-date.js"></script>
+```
+
 ### Creation
 
 To create a NaiveDate, you can use the constructor.
@@ -30,10 +44,21 @@ import NaiveDate from 'naive-date'
 
 // date only
 // since we use 0 based indexes, the month below is Feb, not Jan
-new NaiveDate(2022, 1, 1)
+const x = new NaiveDate(2022, 1, 1)
 
 // date and time
-new NaiveDate(2022, 1, 1, 10, 0, 0)
+const y = new NaiveDate(2022, 1, 1, 10, 0, 0)
+```
+
+Since a `NaiveDate` is not linked to any time zone (and it's not a timestamp),
+when you print it you won't see any zone info:
+
+```js
+x.toString()
+// => '2022-02-01T00:00:00.000'
+
+y.toString()
+// => '2022-02-01T10:00:00.000'
 ```
 
 ### Getters and Setters
