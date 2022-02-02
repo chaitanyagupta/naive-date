@@ -1,6 +1,6 @@
 {
   "name": "naive-date",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Like Date, but not a timestamp. Useful for time zone conversions.",
   "type": "module",
   "main": "naive-date.js",
