@@ -37,7 +37,7 @@ npm install naive-date
 Or include it directly in your HTML page
 
 ```html
-<script src="https://unpkg.com/naive-date@0.2.0/dist/naive-date.js"></script>
+<script src="https://unpkg.com/naive-date/dist/naive-date.js"></script>
 ```
 
 ### Creation
