@@ -8,9 +8,10 @@
     "build": "webpack",
     "test": "mocha naive-date.test.js"
   },
+  "repository": "github:chaitanyagupta/naive-date",
   "files": ["*.js", "mocha.html", "dist/*"],
   "author": "Chaitanya Gupta",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^9.2.0",
